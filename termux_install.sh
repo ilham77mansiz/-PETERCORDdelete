@@ -4,10 +4,10 @@ _get_repolink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $PETERCORD_REPO == "PETERCORDBOT" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL0lsaGFtTWFuc2llei9USEUtUEVURVJDT1JEL2FyY2hpdmUvbWFzdGVyLnppcA=" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL2lsaGFtNzdtYW5zaXovLVBFVEVSQ09SRC0vYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
     elif [[ $PETERCORD_REPO == "PETERCORDBOT" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL0lsaGFtTWFuc2llei9USEUtUEVURVJDT1JEL2FyY2hpdmUvbWFzdGVyLnppcA=" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL2lsaGFtNzdtYW5zaXovLVBFVEVSQ09SRC0vYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
     elif [[ $PETERCORD_REPO =~ $regex ]]
     then
         if [[ $PETERCORD_REPO_BRANCH ]]
@@ -17,7 +17,7 @@ _get_repolink () {
             echo "${PETERCORD_REPO}/archive/master.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL0lsaGFtTWFuc2llei9USEUtUEVURVJDT1JEL2FyY2hpdmUvbWFzdGVyLnppcA=" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL2lsaGFtNzdtYW5zaXovLVBFVEVSQ09SRC0vYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
     fi
 }
 
