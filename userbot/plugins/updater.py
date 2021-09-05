@@ -47,12 +47,12 @@ async def update_requirements():
 
 
 async def deploy(event, repo, ups_rem, ac_br, txt):
-    if HEROKU_API_KEY is not None:
+    if Config.HEROKU_API_KEY is not None:
         import heroku3
-        heroku = heroku3.from_key(HEROKU_API_KEY)
+        heroku = heroku3.from_key(Config.HEROKU_API_KEY)
         heroku_app = None
         heroku_applications = heroku.apps()
-        if HEROKU_APP_NAME is None:
+        if Config.HEROKU_APP_NAME is None:
             await event.edit(
                 '`[HEROKU]: Harap Siapkan Variabel` **HEROKU_APP_NAME** `'
                 ' untuk dapat deploy perubahan terbaru dari 🛡PETERCORD USERBOT🛡.`'
@@ -60,7 +60,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             repo.__del__()
             return
         for app in heroku_applications:
-            if app.name == HEROKU_APP_NAME:
+            if app.name == Config.HEROKU_APP_NAME:
                 heroku_app = app
                 break
         if heroku_app is None:
@@ -74,7 +74,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
         heroku_git_url = heroku_app.git_url.replace(
-            "https://", "https://api:" + HEROKU_API_KEY + "@")
+            "https://", "https://api:" + Config.HEROKU_API_KEY + "@")
         if "heroku" in repo.remotes:
             remote = repo.remote("heroku")
             remote.set_url(heroku_git_url)
