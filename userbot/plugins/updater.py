@@ -121,7 +121,7 @@ async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     await event.edit("`Mengecek Pembaruan, Silakan Menunggu....`")
     conf = event.pattern_match.group(1)
-    off_repo = UPSTREAM_REPO_URL
+    off_repo = Config.UPSTREAM_REPO_URL
     force_update = False
     try:
         txt = "`Maaf Petercord Pembaruan Tidak Dapat Di Lanjutkan Karna "
@@ -148,7 +148,7 @@ async def upstream(event):
         repo.heads.master.checkout(True)
 
     ac_br = repo.active_branch.name
-    if ac_br != UPSTREAM_REPO_BRANCH:
+    if ac_br != Config.UPSTREAM_REPO_BRANCH:
         await event.edit(
             '**[UPDATER]:**\n'
             f'`Looks like you are using your own custom branch ({ac_br}). '
