@@ -1,1 +1,1 @@
-userbot: python -m userbot
+petercord: bash termux_install.sh
