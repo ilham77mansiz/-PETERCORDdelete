@@ -66,7 +66,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             veriler = button(0, sorted(CMD_HELP))
             result = await builder.article(
                 f"Hey! Only use .help please",
-                text=f"**𝐌𝐔𝐋𝐀𝐈 𝐏𝐄𝐓𝐄𝐑𝐂𝐎𝐑𝐃**\n\n 𝐉𝐔𝐌𝐋𝐀𝐇 𝐏𝐋𝐔𝐆𝐈𝐍𝐒 𝐓𝐄𝐑𝐒𝐄𝐃𝐈𝐀 :`{len(CMD_HELP)}`\n**𝗛𝗔𝗟𝗔𝗠𝗔𝗡:** 1/{veriler[0]}",
+                text=f"🎴 PETERCORD 🎴\n\n📜 MODULES 📜 :`{len(CMD_HELP)}`\n📒 HALAMAN 📒: 1/{veriler[0]}",
                 buttons=veriler[1],
                 link_preview=False,
             )
@@ -78,63 +78,61 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 buttons=[[custom.Button.url("URL", part[0])]],
                 link_preview=True,
             )
-        elif event.text=='':
+        elif event.text == '':
             result = builder.article(
                 "@TEAMSquadUserbotSupport",
                 text="""**Hey! This is [PETERCORDBOT.](https://t.me/TEAMSquadUserbotSupport) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/TEAMSquadUserbotSupport"),
                         custom.Button.url(
-                            "⚡ GROUP ⚡", "https://t.me/TEAMSquadUserbotSupport"
-                        ),
+                            "📣 CHANNEL 📣",
+                            "https://t.me/UserbotTEAM_Tutorial"),
+                        custom.Button.url(
+                            "📢 GROUP 📢",
+                            "https://t.me/TEAMSquadUserbotSupport"),
                     ],
                     [
                         custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/IlhamMansiez/PETERCORDBOT"),
-                        custom.Button.url
-                    (
-                            "🔰 TUTORIAL 🔰", ""
-                    )
-                    ],
+                            "✨ REPO ✨",
+                            "https://github.com/Ilham77Mansiz/-PETERCORD-"),
+                        custom.Button.url(
+                            "🔰 TUTORIAL 🔰",
+                            "https://t.me/UserbotTEAM_Tutorial")],
                 ],
                 link_preview=False,
             )
         await event.answer([result] if result else None)
 
-    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"page\((.+?)\)")))
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"page\\((.+?)\\)")))
     async def page(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "HELLO THERE. PLEASE MAKE YOUR OWN PETERCORDBOT AND USE. © PETERCORDBOT ™",
+                "Harap Deploy PETERCORD USERBOT Anda Sendiri, Jangan Menggunakan Milik PETERCORD {DEFAULTUSER} ",
                 cache_time=0,
                 alert=True,
             )
         page = int(event.data_match.group(1).decode("UTF-8"))
         veriler = button(page, CMD_HELP)
         await event.edit(
-            f"**𝗣𝗘𝗧𝗘𝗥𝗖𝗢𝗥𝗗 𝗨𝗦𝗘𝗥𝗕𝗢𝗧\n\n┏━━━━━━━━━━━━━━━━━━━\n┗━━━━━━━━━━━━━━━━━━━ \n\n𝐑𝐄𝐏𝐎 𝗣𝗘𝗧𝗘𝗥𝗖𝗢𝗥𝗗 𝗣𝗟𝗨𝗚𝗜𝗡𝗦**\n[𝗦𝗨𝗣𝗣𝗢𝗥𝗧](https://t.me/TEAMSquadUserbotSupport)\n𝗕𝗘𝗥𝗝𝗔𝗟𝗔𝗡\n\n**𝗝𝗨𝗠𝗟𝗔𝗛 𝗣𝗟𝗨𝗚𝗜𝗡𝗦 𝗧𝗘𝗥𝗦𝗘𝗗𝗜𝗔 :** `{len(CMD_HELP)}`\n**𝗛𝗔𝗟𝗔𝗠𝗔𝗡:** {page + 1}/{veriler[0]}",
+            f"🎴 PETERCORD 🎴\n\n📜 MODULES 📜 : `{len(CMD_HELP)}`\n📒 HALAMAN 📒: {page + 1}/{veriler[0]}",
             buttons=veriler[1],
             link_preview=False,
         )
-        
+
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:
-            await event.edit(
-              "💐PETERCORDBOT Menu Provider Is now Closed💐\n\n         **[© PETERCORDBOT ™](https://t.me/TEAMSquadUserbotSupport)**", 5, link_preview=False
-            )
+            await event.edit("MENU CLOSE PETERCORD By. Tentang Aku Dan Dia")
         else:
-            PETERCORD_alert = "HELLO THERE. PLEASE MAKE YOUR OWN PETERCORDBOT AND USE. © PETERCORDBOT ™"
-            await event.answer(PETERCORD_alert, cache_time=0, alert=True)
-          
-    @tgbot.on(
-        callbackquery.CallbackQuery(data=compile(b"Information\[(\d*)\]\((.*)\)"))
-    )
+            reply_pop_up_alert = f"Harap Deploy Petercord Userbot Anda Sendiri, Jangan Menggunakan Milik Petercord {DEFAULTUSER}",
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
+    @tgbot.on(callbackquery.CallbackQuery(
+        data=compile(b"Information\\[(\\d*)\\]\\((.*)\\)")))
     async def Information(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "HELLO THERE. PLEASE MAKE YOUR OWN PETERCORDBOT AND USE. © PETERCORDBOT ™",
+                "Harap Deploy PETERCORD USERBOT Anda Sendiri, Jangan Menggunakan Milik PETERCORD {DEFAULTUSER} ",
                 cache_time=0,
                 alert=True,
             )
@@ -144,7 +142,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         try:
             buttons = [
                 custom.Button.inline(
-                    "⚡ " + cmd[0], data=f"commands[{commands}[{page}]]({cmd[0]})"
+                    "📩 " + cmd[0], data=f"commands[{commands}[{page}]]({cmd[0]})"
                 )
                 for cmd in CMD_HELP_BOT[commands]["commands"].items()
             ]
@@ -153,21 +151,20 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 "No Description is written for this plugin", cache_time=0, alert=True
             )
 
-        buttons = [buttons[i : i + 2] for i in range(0, len(buttons), 2)]
-        buttons.append([custom.Button.inline("◀", data=f"page({page})")])
+        buttons = [buttons[i: i + 2] for i in range(0, len(buttons), 2)]
+        buttons.append([custom.Button.inline("⏪", data=f"page({page})")])
         await event.edit(
-            f"**┏━━━━━━━━━━━━━━━━━**\n File:** `{commands}`\n**┗━━━━━━━━━━━━━━━━━**\n\n**┏━━━━━━━━━━━━━━━━━**\n Number of commands :** `{len(CMD_HELP_BOT[commands]['commands'])}`\n┗━━━━━━━━━━━━━━━━━",
+            f"⬇️File: `{commands}`\n📩Number of commands : `{len(CMD_HELP_BOT[commands]['commands'])}`",
             buttons=buttons,
             link_preview=False,
         )
 
-    @tgbot.on(
-        callbackquery.CallbackQuery(data=compile(b"commands\[(.*)\[(\d*)\]\]\((.*)\)"))
-    )
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(
+        b"commands\\[(.*)\\[(\\d*)\\]\\]\\((.*)\\)")))
     async def commands(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "HELLO THERE. PLEASE MAKE YOUR OWN PETERCORDBOT AND USE. © PETERCORDBOT ™",
+                "Harap Deploy PETERCORD USERBOT Anda Sendiri, Jangan Menggunakan Milik PETERCORD {DEFAULTUSER} ",
                 cache_time=0,
                 alert=True,
             )
@@ -176,39 +173,38 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         page = int(event.data_match.group(2).decode("UTF-8"))
         commands = event.data_match.group(3).decode("UTF-8")
 
-        result = f"**┏━━━━━━━━━━━━━━━━━\n File:** `{cmd}`\n┗━━━━━━━━━━━━━━━━━\n\n"
+        result = f"⬇️File: `{cmd}`\n\n"
         if CMD_HELP_BOT[cmd]["info"]["info"] == "":
             if not CMD_HELP_BOT[cmd]["info"]["warning"] == "":
-                result += f"**┏━━━━━━━━━━━━━━━━━\n Terdata:** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n┗━━━━━━━━━━━━━━━━━\n"
-                result += f"**❌ Warning :** {CMD_HELP_BOT[cmd]['info']['warning']}\n\n"
+                result += f"⬇️Terdata: {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
+                result += f"❌BERBAHAYA: {CMD_HELP_BOT[cmd]['info']['warning']}\n\n"
             else:
-                result += f"**┏━━━━━━━━━━━━━━━━━\n Terdata:** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n┗━━━━━━━━━━━━━━━━━\n"
+                result += f"⬇️Terdata: {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
         else:
-            result += f"**┏━━━━━━━━━━━━━━━━━\n Terdata:** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n┗━━━━━━━━━━━━━━━━━\n"
+            result += f"⬇️Terdata: {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
             if not CMD_HELP_BOT[cmd]["info"]["warning"] == "":
-                result += f"**❌ Warning:** {CMD_HELP_BOT[cmd]['info']['warning']}\n"
-            result += f"**ℹ🎖 Info:** {CMD_HELP_BOT[cmd]['info']['info']}\n\n"
+                result += f"❌BERBAHAYA: {CMD_HELP_BOT[cmd]['info']['warning']}\n"
+            result += f"ℹ️Info: {CMD_HELP_BOT[cmd]['info']['info']}\n\n"
 
         command = CMD_HELP_BOT[cmd]["commands"][commands]
         if command["params"] is None:
-            result += f"**┏━━━━━━━━━━━━━━━━━**\n Commands: `{COMMAND_HAND_LER[:1]}{command['command']}`\n┗━━━━━━━━━━━━━━━━━\n"
+            result += f"🛠 DAFTAR PETERCORD\n Commands: `{CUSTOM_HELP[:1]}{command['command']}`\n"
         else:
-            result += f"**┏━━━━━━━━━━━━━━━━━**\n Commands: `{COMMAND_HAND_LER[:1]}{command['command']} {command['params']}`\n┗━━━━━━━━━━━━━━━━━\n"
+            result += f"🛠 PERINTAH\n Commands: `{CUSTOM_HELP[:1]}{command['command']} {command['params']}`\n"
 
         if command["example"] is None:
-            result += f"**┏━━━━━━━━━━━━━━━━━\n Explanation:** `{command['usage']}`\n┗━━━━━━━━━━━━━━━━━\n"
+            result += f"💬 PESAN: `{command['usage']}`\n"
         else:
-            result += f"**┏━━━━━━━━━━━━━━━━━\n Explanation:** `{command['usage']}`\n┗━━━━━━━━━━━━━━━━━\n"
-            result += f"**┏━━━━━━━━━━━━━━━━━\n For Example:** `{COMMAND_HAND_LER[:1]}{command['example']}`\n┗━━━━━━━━━━━━━━━━━\n"
+            result += f"⌨ DAFTAR PETERCORD: `{command['usage']}`\n"
+            result += f"📩 SAMPEL MODULES: `{COMMAND_HAND_LER[:1]}{command['example']}`\n"
 
         await event.edit(
             result,
             buttons=[
-                custom.Button.inline("◀", data=f"Information[{page}]({cmd})")
+                custom.Button.inline("⏪", data=f"Information[{page}]({cmd})")
             ],
             link_preview=False,
         )
-
 
 # Ask owner before using it in your codes
 # Kangers like LB stay away...
