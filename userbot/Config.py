@@ -157,6 +157,8 @@ if ENV:
         UPSTREAM_REPO = os.environ.get(
             "UPSTREAM_REPO", "https://github.com/Ilham77mansiz/-PETERCORD-"
         )
+        UPSTREAM_REPO_BRANCH = os.environ.get(
+            "UPSTREAM_REPO_BRANCH", "master")
         STRING_SESSION = os.environ.get("STRING_SESSION", None)
         BOT_MODE = os.environ.get("BOT_MODE", "ON")
         BOT_TRIGGER = os.environ.get("BOT_TRIGGER", "^/")
