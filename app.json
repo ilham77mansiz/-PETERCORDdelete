@@ -1,0 +1,195 @@
+{
+  "name": "PetercordBot",
+  "description": "PETERCORD",
+  "logo": "https://telegra.ph/file/b52e42266a323cbe9f849.jpg",
+    "keywords": [
+    "telegram",
+    "userbot",
+    "plugin",
+    "modular",
+    "productivity"
+  ],
+  "repository": "https://github.com/Ilham77mansiz/-PETERCORD-",
+  "website": "https://github.com/Ilham77mansiz/-PETERCORD-",
+  "success_url": "https://t.me/diemmmmmmmmmm",
+  "env": {
+    "ENV": {
+      "description": "Tulis  ANYTHING Untuk jalankan ke heroku.",
+      "value": "ANYTHING"
+    },
+    "TEMP_DOWNLOAD_DIRECTORY": {
+      "description": "Where downloaded files will go.",
+      "value": "./userbot/DOWNLOADS/",
+      "required": false
+    },
+    "ALIVE_NAME": {
+      "description": "Isi Alive nama mu sesuka hati",
+      "value": "",
+      "required": false
+    },
+    "ALIVE_MSG": {
+      "description": "perintah Alive msg isi terserah.",
+      "value": "🎖PETERCORD IS ALIVE🎖",
+      "required": false
+    },
+    "ALIVE_PIC": {
+      "description": "Isi terserah logo untuk alive .",
+      "value": "https://telegra.ph/file/b52e42266a323cbe9f849.jpg",
+      "required": false
+    },
+    "BIO_MSG": {
+      "description": "Letakkan Bio Telegram Anda Disini Diperlukan Untuk Auto Bio.",
+      "value": "PETERCORD",
+      "required": false
+    },
+    "PMPERMIT_PIC": {
+      "description": "letakkan di sini tautan media telegraf apa pun untuk gambar pmpermit khusus.",
+      "value": "https://telegra.ph/file/b52e42266a323cbe9f849.jpg",
+      "required": true
+    },
+    "CUSTOM_PMPERMIT": {
+      "description": "Masukkan pesan izin pm khusus Anda.",
+      "value": "Tolong jangan kau katakan kau suka!",
+      "required": false
+    },
+    "PM_PERMIT_GROUP_ID": {
+      "description": "Masukkan ID Grup Sama Seperti PRIVATE_GROUP_ID Diperlukan Untuk Pmpermit plugin.",
+      "value": "",
+      "required": true
+    },
+    "APP_ID": {
+      "description": "Dapatkan Api key ini dari my.telegram.org! Menempatkan Api key Orang Lain dapat mengakibatkan Pemblokiran Akun.",
+      "value": "2358038"
+    },
+    "REM_BG_API_KEY": {
+      "description": "Diperlukan untuk Menghapus latar belakang gambar. Dapatkan kunci api Anda dari https://www.remove.bg/",
+      "value": "",
+      "required": false
+    },
+    "OCR_SPACE_API_KEY": {
+      "description": "Daftarkan akun di ocr.space untuk mendapatkan nilai ini (kunci API)....",
+      "value": "",
+      "required": false
+    },
+    "LYDIA_API_KEY": {
+      "description": "Dibutuhkan untuk Lydia AI. Ikuti https://telegra.ph/Lydia-09-05 untuk mendapatkan API Anda.",
+      "value": "",
+      "required": false
+    },
+    "SUDO_USERS": {
+      "description": "Masukkan id pengguna teman Anda untuk memberinya akses bot sudo",
+      "value": "",
+      "required": false
+    },
+    "SUDO_COMMAND_HAND_LER": {
+      "description": "Silakan masukkan penangan perintah pengguna sudo",
+      "value": "*",
+      "required": false
+    },
+    "API_HASH": {
+      "description": "Dapatkan Api hash ini dari my.telegram.org! Menempatkan Api hash Orang Lain Dapat mengakibatkan Pemblokiran Akun.",
+      "value": "f04dfd36984b7f760db6da8c0c8c377c"
+    },
+    "PLUGIN_CHANNEL": {
+      "description": "Buat grup pribadi tambahkan bot rose lalu ketik /id. PLUGIN_CHANNEL dan PRIVATE_GROUP_ID kedua nilai harus sama",
+      "value": "-1001277950257"
+    },
+    "PRIVATE_GROUP_BOT_API_ID": {
+      "description": "buat channel pribadi lalu ketik .get_id tambahkan nilai itu di sini untuk menyimpan pesan",
+      "value": "-1001321271170"
+    },
+    "PRIVATE_GROUP_ID": {
+      "description": "Buat grup pribadi tambahkan bot rose lalu ketik /id. PLUGIN_CHANNEL dan PRIVATE_GROUP_ID kedua nilai harus sama",
+      "value": "-1001277950257"
+    },
+    "PM_LOGGR_BOT_API_ID": {
+       "description": "untuk masuk pesan pribadi buat channel pribadi dan lakukan .get_id dan tambahkan id itu that", 
+       "value": "-1001321271170"
+    }, 
+    "STRING_SESSION": {
+      "description": "Untuk mendapatkan stringg join grup @TEAMSquadUserbotSupport / Hubungi @diemmmmmmmmmm  ",
+      "value": "1BVtsOGwBuw7ZmqnjRCfXo4ZbIs0JTxx81i5RU5owqy7sSIMvx1KDw0MF8MK0RA6PDBcL2axxB-5Ap9P-Sniwe4Gnp-lqBlSpUibGMcAsgb9catA7N6BsgCY3tcsFaLkh1DHsZNaQX4-kDrk7jUNuuuZk6z3P5bnt_pyOZ3x8i54kc_LJjqkzno3Lsoh3caUWuhpa6njmK6NqSfnTl5DMi3hVeCXmHswIiBifxw4bNWKmSEaGHqogDXLt8nia1KpDQnEMwUeUdiag3EvlI9U_Ppe_Rh5BMbq_k5pzVtLFHD5faZ_tzcL7fNu4m3Th3eVcEh3lAMbzcmndw6GwpihaQ2OGXGH5XKg="
+    },
+    "HEROKU_API_KEY": {
+      "description": "Go to https://dashboard.heroku.com/account, scroll down and press Reveal API.Required for updater to work.",
+      "value": "001387aa-47bf-44fe-9e9f-766622db0d54",
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "description": "The Value of App Name you filled in right on top.Required for updater to work.",
+      "value": "crashki",
+      "required": true
+    },
+    "TG_BOT_TOKEN_BF_HER": {
+      "description": "Needed for inline buttons maker. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the token of your bot. And Don't Forget To Turn on inline Mode on bot settings. Get it.",
+      "value": "1617342120:AAE8Vweeszbk4yv1q_tjZPSiOIHiJv4GgTw"
+    },
+    "CHROME_BIN": {
+      "description": "For Carbon.py. Leave as it is. ",
+      "value": "/app/.apt/usr/bin/google-chrome",
+      "required": false
+    },
+    "CHROME_DRIVER": {
+      "description": "For Carbon.py. Leave as it is. ",
+      "value": "/app/.chromedriver/bin/chromedriver",
+      "required": false
+    },
+    "TG_BOT_USER_NAME_BF_HER": {
+      "description": "Needed for inline buttons maker. Make a bot at @BotFather and get the username of your bot",
+      "value": "@musichabut_bot"
+    },
+    "OPEN_WEATHER_MAP_APPID": {
+      "description": "Get your own APPID from https://api.openweathermap.org/data/2.5/weather",
+      "required": false
+    },
+    "NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD": {
+      "description": " Set The Amount Of Buttons Displayed In Help Command default 8",
+      "value": "8",
+      "required": true
+    },
+    "NO_OF_COLUMS_DISPLAYED_IN_H_ME_CMD": {
+      "description": "Set The Amount Of Rows You Want To Displayed In Help Command default 2",
+      "value": "2",
+      "required": true
+    },
+    "EMOJI_TO_DISPLAY_IN_HELP": {
+      "description": "Set The emojies You Want to Add In Help Command!!",
+      "value": "🎖",
+      "required": false
+    }, 
+    "TZ": {
+      "description": "Required for Correct Time for autopic get from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
+      "value": "Asia/Jakarta",
+      "required": false
+    },
+    "PM_DATA": {
+      "description": "Type DISABLE if you want to disable pm protection... ",
+      "value": "ENABLE",
+      "required": false
+    }
+    },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],"buildpacks": [{
+    "url": "https://github.com/heroku/heroku-buildpack-python.git"
+  }, {
+    "url": "https://github.com/heroku/heroku-buildpack-redis"
+  }, {
+    "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
+  }, {
+    "url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab"
+  },{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+  }, {
+    "url": "https://github.com/amivin/aria2-heroku"
+  }, {
+    "url": "https://github.com/stevo550/buildpack-slug-cleaner"
+  }]
+}
