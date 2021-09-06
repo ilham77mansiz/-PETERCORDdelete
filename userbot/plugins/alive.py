@@ -1,7 +1,7 @@
  
 # Made by @diemmmmmmmmmm...and thanks to @Crackexy for the logos...
 # Porting in PETERCORD Userbot by @diemmmmmmmmmm
-
+from userbot.Config import Config
 import asyncio
 import random
 from telethon import events
@@ -47,7 +47,7 @@ async def amireallyalive(alive):
         f"┣|⚡ `Username :`@{user.username} \n"
         f"┣|⚡ `Telethon :`Ver {version.__version__} \n"
         f"┣|⚡ `Python   :`Ver {python_version()} \n"
-        f"┣|⚡ `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
+        f"┣|⚡ `Branch   :`{Config.UPSTREAM_REPO_BRANCH} \n"
         f"┣|⚡ `Bot Ver  :`{PETERCORDversion} \n"
         f"┣|⚡ `Sudo     :`{ludosudo} \n"
         f"┣|⚡ `Modules  :`{len(modules)} Modules \n"
