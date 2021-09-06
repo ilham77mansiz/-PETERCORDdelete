@@ -1,4 +1,4 @@
-SUDO_COMMAND_HAND_LER
+
 from userbot import *
 from PETERCORDBOT.utils import *
 from userbot.cmdhelp import CmdHelp
