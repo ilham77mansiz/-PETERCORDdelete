@@ -1,6 +1,9 @@
  
-# Made by @diemmmmmmmmmm...and thanks to @Crackexy for the logos...
+# Made by @diemmmmmmmmmm
 # Porting in PETERCORD Userbot by @diemmmmmmmmmm
+
+from telethon import __version__, version
+
 from userbot.Config import Config
 import asyncio
 import random
