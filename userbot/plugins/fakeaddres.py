@@ -3,7 +3,7 @@ import urllib.request
 
 
 from userbot.events import register
-from userbot import CMD_HELP
+from userbot.cmdhelp import CmdHelp
 
 
 # Port By @VckyouuBitch From GeezProject
@@ -35,3 +35,7 @@ async def _(event):
         f"<b><u>INFORMASI BERHASIL DIKUMPULKAN</b></u>\n\n<b>Ip type :-</b><code>{geez1}</code>\n<b>Country code:- </b> <code>{geez2}</code>\n<b>State name :-</b><code>{geez3}</code>\n<b>City name :- </b><code>{geez4}</code>\n<b>zip :-</b><code>{geez5}</code>\n<b>Latitude:- </b> <code>{geez6}</code>\n<b>Longitude :- </b><code>{geez7}</code>\n",
         parse_mode="HTML",
     )
+
+CmdHelp("fakeaddres").add_command(
+  'ip', '<ip address>', 'Memberikan detail tentang alamat ip'
+).add()
