@@ -89,7 +89,7 @@ if ENV:
         if TAG_LOGGER: TAG_LOGGER = int(TAG_LOGGER)
         UPSTREAM_REPO_URL = os.environ.get(
             "UPSTREAM_REPO_URL",
-            "https://github.com/IlhamMansiez/PETERCORDBOT")
+            "https://github.com/Ilham77Mansiz/-PETERCORD-")
         UPSTREAM_REPO_BRANCH = os.environ.get(
             "UPSTREAM_REPO_BRANCH", "master")
 
