@@ -33,7 +33,7 @@ def button(page, modules):
     for pairs in pairs[page]:
         buttons.append(
             [
-                custom.Button.inline(f"💐 " + pair, data=f"Information[{page}]({pair})")
+                custom.Button.inline(f"📑 " + pair, data=f"Information[{page}]({pair})")
                 for pair in pairs
             ]
         )
@@ -41,13 +41,13 @@ def button(page, modules):
     buttons.append(
         [
             custom.Button.inline(
-               f"◀", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+               f"⏪", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
-               f"𝗖𝗟𝗢𝗦𝗘", data="close"
+               f"🚫", data="close"
             ),
             custom.Button.inline(
-               f"▶", data=f"page({0 if page == (max_pages - 1) else page + 1})"
+               f"⏩", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
         ]
     )
