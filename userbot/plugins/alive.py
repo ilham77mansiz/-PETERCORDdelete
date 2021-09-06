@@ -29,7 +29,7 @@ else:
 PETERCORD = bot.uid
 
 
-edit_time = 16
+
 """ =======================CONSTANTS====================== """
 file1 = "https://telegra.ph/file/b52e42266a323cbe9f849.jpg"
 file2 = "https://telegra.ph/file/b52e42266a323cbe9f849.jpg"
