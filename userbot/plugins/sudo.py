@@ -14,8 +14,8 @@ sudousers = Config.SUDO_USERS
 
 @bot.on(admin_cmd(pattern="sudo"))
 async def sudo(event):
-    sudo = "True" if SUDO_USERS else "False"
-    users = SUDO_USERS
+    sudo = "True" if Config.SUDO_USERS else "False"
+    users = Config.SUDO_USERS
     if sudo == "True":
         await edit_or_replay(event, f"**Petercord Userbot mengaktifkan**\nSudo - `Menyala`\nSudo user(s) - `{users}`")
     else:
