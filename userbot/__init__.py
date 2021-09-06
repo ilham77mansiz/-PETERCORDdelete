@@ -131,7 +131,9 @@ except:
     YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
     # Default .alive name
+    
     ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+    ALIVE_LOGO = os.environ.get("ALIVE_LOGO", "https://telegra.ph/file/b52e42266a323cbe9f849.jpg")
     AUTONAME = os.environ.get("AUTONAME", None)
     REDIRECTCHANNEL = os.environ.get("REDIRECTCHANNEL", None)
 
@@ -150,7 +152,7 @@ except:
     # Upstream Repo
     UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/IlhamMansiez/PETERCORDBOT.git")
+    "https://github.com/Ilham77Mansiz/-PETERCORD-.git")
 
     # Last.fm Module
     BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
