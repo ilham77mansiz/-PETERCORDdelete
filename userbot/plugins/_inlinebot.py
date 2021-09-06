@@ -20,7 +20,7 @@ PETERCORD_emoji = Config.EMOJI_IN_HELP
 # PETERCORD
 
 def button(page, modules):
-    Row = PETERCORD_row
+    Row = 2
     Column = 3
 
     modules = sorted([modul for modul in modules if not modul.startswith("_")])
