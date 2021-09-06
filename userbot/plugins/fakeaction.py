@@ -1,5 +1,6 @@
 from userbot.events import register
-from userbot import CMD_HELP
+from userbot.cmdhelp import CmdHelp
+
 import asyncio
 
 
@@ -73,3 +74,17 @@ async def _(event):
     await event.edit(f"`Starting Fake Game Playing For {t} sec.`")
     async with event.client.action(event.chat_id, "game"):
         await asyncio.sleep(t)
+
+CmdHelp("fakeaction").add_command(
+    'ftyping',
+    '<jumlah teks>',
+    'Seakan akan sedang mengetik padahal tidak').add_command(
+        'faudio',
+        '<jumlah teks>',
+        'Berfungsi sama seperti ftyping tapi ini dalam bentuk fake audio').add_command(
+            'fgame',
+            '<jumlah teks>',
+            'Berfungsi sama seperti ftyping tapi ini dalam bentuk fake game').add_command(
+                'fvideo',
+                '<jumlah teks>',
+    'Berfungsi sama seperti ftyping tapi ini dalam bentuk fake vidio').add()
