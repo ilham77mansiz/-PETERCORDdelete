@@ -2,7 +2,9 @@
 
 
 
-from . import register, edit_or_reply
+from PETERCORDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from userbot.cmdhelp import CmdHelp
+
 from userbot import bot
 
 
