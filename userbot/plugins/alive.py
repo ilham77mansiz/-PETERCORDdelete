@@ -9,7 +9,7 @@ import asyncio
 import random
 from telethon import events
 from userbot.utils import admin_cmd
-from userbot import ALIVE_NAME, PETERCORDversion, ALIVE_LOGO
+from userbot import *
 from PETERCORDBOT.utils import admin_cmd, sudo_cmd
 from telethon.tl.types import ChannelParticipantsAdmins
 from userbot.cmdhelp import CmdHelp
@@ -53,7 +53,7 @@ async def amireallyalive(alive):
         f"┣|⚡ `Branch   :`{Config.UPSTREAM_REPO_BRANCH} \n"
         f"┣|⚡ `Bot Ver  :`{PETERCORDversion} \n"
         f"┣|⚡ `Sudo     :`{ludosudo} \n"
-        f"┣|⚡ `Modules  :`{len(modules)} Modules \n"
+        f"┣|⚡ `Modules  :`{len(CMD_HELP)} Modules \n"
         f"┗━━━━━━━━━━━━━━━━━━━ \n\n")
     if ALIVE_LOGO:
         try:
