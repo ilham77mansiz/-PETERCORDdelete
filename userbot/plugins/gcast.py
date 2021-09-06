@@ -26,3 +26,6 @@ async def gcast(event):
                 er += 1
     await kk.edit(f"**╭✠╼━━━━━━❖━━━━━━━✠╮** Broadcast Terkirim Ke =** `{done}` **Grup, Broadcast Gagal Terkirim =** `{er}`**Grup**╰✠╼━━━━━━❖━━━━━━━✠╯**")
 
+CmdHelp("gcast").add_command(
+  'gcast', '<text>', 'Global broadcast ke semu grup yang dimasuki'
+).add()
