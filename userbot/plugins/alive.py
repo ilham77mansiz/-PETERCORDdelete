@@ -3,7 +3,7 @@
 # Porting in PETERCORD Userbot by @diemmmmmmmmmm
 
 from telethon import __version__, version
-
+from platform import python_version
 from userbot.Config import Config
 import asyncio
 import random
@@ -47,7 +47,6 @@ async def amireallyalive(alive):
         f"**🪐 PETERCORD USERBOT 🪐** \n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
         f"┣|⚡ `Petercord:`{DEFAULTUSER} \n"
-        f"┣|⚡ `Username :`@{user.username} \n"
         f"┣|⚡ `Telethon :`Ver {version.__version__} \n"
         f"┣|⚡ `Python   :`Ver {python_version()} \n"
         f"┣|⚡ `Branch   :`{Config.UPSTREAM_REPO_BRANCH} \n"
