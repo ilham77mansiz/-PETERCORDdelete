@@ -11,7 +11,8 @@ heroku_api = "https://api.heroku.com"
 sudousers = Config.SUDO_USERS
 
 
-@register(pattern="sudo ?(.*)",)
+
+@bot.on(admin_cmd(pattern="sudo"))
 async def sudo(event):
     sudo = "True" if SUDO_USERS else "False"
     users = SUDO_USERS
@@ -21,7 +22,7 @@ async def sudo(event):
         await edit_or_replay(event, f"**Petercord Userbot menonaktifkan**\nSudo - `Tidak Aktif`")
 
 
-@register(pattern="cmdhelp ?(.*)",)
+@bot.on(admin_cmd(pattern="cmdhelp"))
 async def handler(event):
     hndlr = Config.COMMAND_HAND_LER
 
@@ -29,10 +30,10 @@ async def handler(event):
     await edit_or_replay(event, f"Command Handler - {hndlr}\nSudo Handler - {sudohndlr}")
 
 
-@register(pattern="addsudo ?(.*)",)
+@bot.on(admin_cmd(pattern="addsudo"))
 async def tb(event):
     ok = await edit_or_replay(event, "Menambahkan sudo...")
-    petercord = "Config.SUDO_USERS"
+    petercord = "SUDO_USERS"
     if Config.HEROKU_APP_NAME is not None:
         app = Heroku.app(Config.HEROKU_APP_NAME)
     else:
