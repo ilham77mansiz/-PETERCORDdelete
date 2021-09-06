@@ -1,14 +1,12 @@
 
-
-
-
 from PETERCORDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 from userbot import bot
 
 
-@register(pattern="gcast (.*)")
+@bot.on(admin_cmd(pattern=r"gcast"))
+@bot.on(sudo_cmd(pattern=r"gcast", allow_sudo=True))
 async def gcast(event):
     xx = event.pattern_match.group(1)
     if not xx:
