@@ -48,7 +48,7 @@ async def amireallyalive(alive):
         f"┣|⚡ `Telethon :`Ver {version.__version__} \n"
         f"┣|⚡ `Python   :`Ver {python_version()} \n"
         f"┣|⚡ `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
-        f"┣|⚡ `Bot Ver  :`{BOT_VER} \n"
+        f"┣|⚡ `Bot Ver  :`{PETERCORDversion} \n"
         f"┣|⚡ `Sudo     :`{ludosudo} \n"
         f"┣|⚡ `Modules  :`{len(modules)} Modules \n"
         f"┗━━━━━━━━━━━━━━━━━━━ \n\n")
