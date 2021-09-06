@@ -1,8 +1,7 @@
 import os
 import sys
 import time
-from telethon.sessions import StringSession
-from telethon import TelegramClient
+from userbot.Petercord.session import Petercord
 from userbot.helpers import functions as simpdef
 from userbot.Config import Config
 from var import Var
@@ -12,13 +11,8 @@ PETERCORDversion = "2.0"
 botversion = "0.1"
 
 os.system("pip install --upgrade pip")
-if Var.STRING_SESSION:
-    session_name = str(Var.STRING_SESSION)
-    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
-else:
-    session_name = "startup"
-    bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 
+bot = Petercord
 
 CMD_LIST = {}
 # for later purposes
@@ -29,7 +23,7 @@ INT_PLUG = ""
 LOAD_PLUG = {}
 
 if Config.UPSTREAM_REPO == "petercord":
-    UPSTREAM_REPO_URL = "https://github.com/IlhamMansiez/THE-PETERCORD"
+    UPSTREAM_REPO_URL = "https://github.com/Ilham77Mansiz/-PETERCORD-"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
