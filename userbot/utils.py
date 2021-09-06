@@ -67,6 +67,7 @@ def load_module(shortname):
         mod.Config = Config
         mod.borg = bot
         mod.PETERCORDBOT = bot
+        mod.Petercord = bot
         mod.edit_or_reply = edit_or_reply
         mod.delete_PETERCORD = delete_PETERCORD
         mod.media_type = media_type
