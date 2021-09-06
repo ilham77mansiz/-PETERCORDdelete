@@ -4,7 +4,7 @@ import time
 from userbot.Petercord.session import Petercord
 from userbot.helpers import functions as simpdef
 from userbot.Config import Config
-from var import Var
+
 
 StartTime = time.time()
 PETERCORDversion = "2.0"
@@ -13,6 +13,7 @@ botversion = "0.1"
 os.system("pip install --upgrade pip")
 
 bot = Petercord
+Petercord = Petercord
 
 CMD_LIST = {}
 # for later purposes
