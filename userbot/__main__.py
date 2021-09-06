@@ -34,9 +34,9 @@ else:
             api_hash=Var.API_HASH
         ).start(bot_token=Var.TG_BOT_TOKEN_BF_HER)
         print("Initialisation finished with no errors")
-        print("Starting PETERCORDBOT")
+        print("Starting Petercord")
         bot.loop.run_until_complete(add_bot(Var.TG_BOT_USER_NAME_BF_HER))
-        print("PETERCORDBOT Startup Completed")
+        print("PETERCORD Startup Completed")
     else:
         bot.start()
 
@@ -52,7 +52,7 @@ for name in files:
 
 import userbot._core
 
-print(f"""PETERCORDBOT IS ON!!! PETERCORDBOT VERSION :- {PETERCORDversion} YOUR PETERCORDBOT IS READY TO USE! FOR CHECK YOUR BOT WORKING OR NOT PLEASE TYPE (.alive/.ping) ENJOY YOUR BOT! JOIN FOR MORE FUTURE UPDATES @TEAMSquadUserbotSupport .""")
+print(f"""📑 PETERCORD TELAH AKTIF 📑\nVERSION :- {PETERCORDversion}""")
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
