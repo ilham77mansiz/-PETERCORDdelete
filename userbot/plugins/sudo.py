@@ -17,9 +17,9 @@ async def sudo(event):
     sudo = "True" if Config.SUDO_USERS else "False"
     users = Config.SUDO_USERS
     if sudo == "True":
-        await edit_or_replay(event, f"**Petercord Userbot mengaktifkan**\nSudo - `Menyala`\nSudo user(s) - `{users}`")
+        await edit_or_reply(event, f"**Petercord Userbot mengaktifkan**\nSudo - `Menyala`\nSudo user(s) - `{users}`")
     else:
-        await edit_or_replay(event, f"**Petercord Userbot menonaktifkan**\nSudo - `Tidak Aktif`")
+        await edit_or_reply(event, f"**Petercord Userbot menonaktifkan**\nSudo - `Tidak Aktif`")
 
 
 @bot.on(admin_cmd(pattern="cmdhelp"))
@@ -27,12 +27,12 @@ async def handler(event):
     hndlr = Config.COMMAND_HAND_LER
 
     sudohndlr = Config.SUDO_COMMAND_HAND_LER
-    await edit_or_replay(event, f"Command Handler - {hndlr}\nSudo Handler - {sudohndlr}")
+    await edit_or_reply(event, f"Command Handler - {hndlr}\nSudo Handler - {sudohndlr}")
 
 
 @bot.on(admin_cmd(pattern="addsudo"))
 async def tb(event):
-    ok = await edit_or_replay(event, "Menambahkan sudo...")
+    ok = await edit_or_reply(event, "Menambahkan sudo...")
     petercord = "SUDO_USERS"
     if Config.HEROKU_APP_NAME is not None:
         app = Heroku.app(Config.HEROKU_APP_NAME)
